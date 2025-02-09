@@ -1,6 +1,9 @@
-# PhD Student at University of Massachusetts, Amherst
+# PhD Student 
+# Computer Science
+## University of Massachusetts, Amherst
 
-### Reasearch Interests
+### Research Interests
+
 
 ### Research Projects
 
