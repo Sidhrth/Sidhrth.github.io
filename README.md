@@ -7,15 +7,15 @@ Through my research, I strive to create practical, human-centered solutions that
 I am currently working under the supervision of Prof. Ravi Karkar. 
 
 ### Experience
-**Research Associate: KCDH (IIT Bombay)**
-- Developed a comprehensive medical record digitization system using transformer models for OCR and layout analysis. Implemented high-fidelity form extraction for both printed and handwritten medical records, streamlining healthcare data management at Narayana Hrudayalaya Hospitals.
-- Advanced medical image synthesis research through guided subset selection, focusing on pneumonia X-ray generation. Developed GAN and WAE models optimized for imbalanced medical datasets, improving labeled data availability and enhancing downstream classification performance in deep learning models.
+**Teaching Assistant (UMass Amherst)**
+- INFO 490PI [Spring 24, Spring 25]
 
 **Research Assistant (UMass Amherst)**
 - WHAT (Wellness, Health And Technology) LAB [Fall 23, Summer 24, Fall 24]
 
-**Teaching Assistant (UMass Amherst)**
-- INFO 490PI [Spring 24, Spring 25]
+**Research Associate: KCDH (IIT Bombay)**
+- Developed a comprehensive medical record digitization system using transformer models for OCR and layout analysis. Implemented high-fidelity form extraction for both printed and handwritten medical records, streamlining healthcare data management at Narayana Hrudayalaya Hospitals.
+- Advanced medical image synthesis research through guided subset selection, focusing on pneumonia X-ray generation. Developed GAN and WAE models optimized for imbalanced medical datasets, improving labeled data availability and enhancing downstream classification performance in deep learning models.
 
 ### Relevant Publicaions 
 **AI vs. Humans for Online Support: Comparing the Language of Responses from LLMs and Online Communities of Alzheimer’s Disease**
