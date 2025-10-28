@@ -1,6 +1,3 @@
-/* ===========================
-   CSS Variables
-   =========================== */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -19,9 +16,6 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===========================
-   Reset & Base Styles
-   =========================== */
 * {
     margin: 0;
     padding: 0;
@@ -66,9 +60,6 @@ img {
     display: block;
 }
 
-/* ===========================
-   Navigation
-   =========================== */
 #navbar {
     position: fixed;
     top: 0;
@@ -159,14 +150,10 @@ img {
     transition: var(--transition);
 }
 
-/* ===========================
-   Hero Section
-   =========================== */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background: var(--bg-light);
     padding-top: 80px;
 }
@@ -278,9 +265,6 @@ img {
     margin: 0 auto;
 }
 
-/* ===========================
-   Section Titles
-   =========================== */
 .section-title {
     font-size: 2.5rem;
     text-align: center;
@@ -301,9 +285,6 @@ img {
     border-radius: 2px;
 }
 
-/* ===========================
-   About Section
-   =========================== */
 .about {
     background: white;
 }
@@ -381,9 +362,6 @@ img {
     color: var(--text-light);
 }
 
-/* ===========================
-   News Section
-   =========================== */
 .news {
     background: var(--bg-light);
 }
@@ -423,9 +401,6 @@ img {
     line-height: 1.6;
 }
 
-/* ===========================
-   Publications Section
-   =========================== */
 .publications {
     background: white;
 }
@@ -528,9 +503,6 @@ img {
     color: var(--secondary-color);
 }
 
-/* ===========================
-   Projects Section
-   =========================== */
 .projects {
     background: var(--bg-light);
 }
@@ -603,9 +575,6 @@ img {
     font-weight: 500;
 }
 
-/* ===========================
-   Teaching Section
-   =========================== */
 .teaching {
     background: white;
 }
@@ -656,9 +625,6 @@ img {
     line-height: 1.7;
 }
 
-/* ===========================
-   Contact Section
-   =========================== */
 .contact {
     background: var(--bg-light);
 }
@@ -736,9 +702,6 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-/* ===========================
-   Footer
-   =========================== */
 footer {
     background: var(--text-dark);
     color: white;
@@ -755,9 +718,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* ===========================
-   Responsive Design
-   =========================== */
 @media (max-width: 968px) {
     .hero-content,
     .about-content {
@@ -842,16 +802,10 @@ footer p {
     }
 }
 
-/* ===========================
-   Scroll Animations
-   =========================== */
 [data-aos] {
     pointer-events: auto;
 }
 
-/* ===========================
-   Custom Scrollbar
-   =========================== */
 ::-webkit-scrollbar {
     width: 10px;
 }
