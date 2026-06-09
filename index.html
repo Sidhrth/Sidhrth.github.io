@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sidharth Kaliappan - PhD Candidate in Computer Science at UMass Amherst, specializing in Human-Computer Interaction and Personal Health Informatics">
-    <meta name="keywords" content="Sidharth Kaliappan, HCI, Health Informatics, AI, UMass, Computer Science">
+    <meta name="description" content="Sidharth Kaliappan - PhD Candidate in Computer Science at UMass Amherst, specializing in Human-Computer Interaction, Personal Health Informatics, and Conversational AI">
+    <meta name="keywords" content="Sidharth Kaliappan, HCI, Health Informatics, AI, UMass, Computer Science, Self-Experimentation, CASEbot">
     <meta name="author" content="Sidharth Kaliappan">
-    
-    <title>Sidharth Kaliappan</title>
-    
+
+    <title>Sidharth Kaliappan · PhD Candidate, UMass Amherst</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Google Fonts: Cormorant Garamond for headers, DM Sans for body, JetBrains Mono for accents -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,14 +25,20 @@
     <nav id="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#home" class="logo">Sidharth Kaliappan</a>
+                <a href="#home" class="logo">
+                    <span class="logo-mark">SK</span>
+                    <span class="logo-name">Sidharth Kaliappan</span>
+                </a>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#news" class="nav-link">News</a></li>
                     <li><a href="#publications" class="nav-link">Publications</a></li>
                     <li><a href="#research" class="nav-link">Research</a></li>
                     <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                    <li><a href="#talks" class="nav-link">Talks</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="files/Sidharth_CV.pdf" class="nav-link" target="_blank">CV</a></li>
+                    <li><a href="files/Sidharth_CV.pdf" class="nav-link nav-cv" target="_blank">CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -46,30 +51,55 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="profile-image">
-                    <img src="images/profile.png" alt="Sidharth Kaliappan">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">PhD Candidate · Human-Computer Interaction</p>
+                    <h1 class="hero-title">Sidharth <br><em>Kaliappan</em></h1>
+                    <p class="hero-lede">
+                        Improving personal health tracking and building AI-assisted
+                        technologies that make self-tracking more accurate, useful,
+                        and trustworthy.
+                    </p>
+                    <p class="hero-affiliation">
+                        Manning College of Information &amp; Computer Sciences<br>
+                        <span class="affiliation-school">University of Massachusetts Amherst</span>
+                    </p>
+                    <p class="hero-advisor">
+                        <span class="advisor-label">Advised by</span>
+                        <a href="https://people.cs.umass.edu/~rkarkar/" target="_blank">Dr. Ravi Karkar</a>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="files/Sidharth_CV.pdf" class="btn btn-primary" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+                            Curriculum Vitae
+                        </a>
+                        <a href="#publications" class="btn btn-ghost">Publications →</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:skaliappan@umass.edu" title="Email" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=MgZwTfAAAAAJ&hl=en" target="_blank" title="Google Scholar" aria-label="Google Scholar">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.84 3.77A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.27L24 9.5z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sidharth-kaliappan" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                        </a>
+                        <a href="https://github.com/Sidhrth" target="_blank" title="GitHub" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <h1>Sidharth Kaliappan</h1>
-                <p class="title">PhD Candidate in Computer Science</p>
-                <p class="affiliation">University of Massachusetts Amherst</p>
-                <div class="contact-links">
-                    <a href="mailto:skaliappan@umass.edu"><i class="fas fa-envelope"></i> skaliappan@umass.edu</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://scholar.google.com/citations?user=MgZwTfAAAAAJ&hl=en" target="_blank" title="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sidharth-kaliappan-8b1250125/" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Sidhrth" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="files/CV_Sidharth_Kaliappan.pdf" target="_blank" title="CV">
-                        <i class="fas fa-file-pdf"></i>
-                    </a>
+                <div class="hero-visual">
+                    <div class="profile-frame">
+                        <div class="profile-frame-inner">
+                            <img src="images/profile.jpg" alt="Sidharth Kaliappan">
+                        </div>
+                        <div class="frame-deco frame-deco-1"></div>
+                        <div class="frame-deco frame-deco-2"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,27 +108,59 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>
-                    I am a PhD candidate specializing in <strong>Human-Computer Interaction</strong> with a focus on 
-                    personal health informatics, self-tracking, and AI-assisted health interventions. My research explores 
-                    conversational AI systems for personalized health experimentation and aging populations, with emerging 
-                    work in stress management and digital wellbeing.
-                </p>
-                <p>
-                    I am advised by <a href="https://people.cs.umass.edu/~rkarkar/" target="_blank">Dr. Ravi Karkar</a> 
-                    at the Manning College of Information and Computer Sciences, UMass Amherst.
-                </p>
-                
-                <h3>Research Interests</h3>
-                <ul class="interests-list">
-                    <li>Personal Health Informatics & Self-Tracking</li>
-                    <li>Conversational AI for Health Interventions</li>
-                    <li>Self-Experimentation & N-of-1 Studies</li>
-                    <li>Technology for Aging Populations</li>
-                    <li>Stress Management & Digital Wellbeing</li>
-                </ul>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About</h2>
+                <div class="section-rule"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-prose">
+                    <p class="lead">
+                        I am a third-year PhD candidate specializing in <strong>Human-Computer
+                        Interaction</strong>, with a focus on improving personal health tracking
+                        and designing AI-assisted health interventions.
+                    </p>
+                    <p>
+                        My research explores how AI-assisted tools can help people better track
+                        and make sense of their own health data. A central focus of my work is
+                        improving the quality and reliability of self-reported health tracking,
+                        and developing technologies that make health tracking more accurate,
+                        useful, and trustworthy.
+                    </p>
+                    <p>
+                        Before UMass, I earned my MSc in Computer Science from the University of
+                        Geneva, and spent a year at the Koita Centre for Digital Health at
+                        IIT Bombay working on intelligent OCR for medical records and synthetic
+                        medical imaging.
+                    </p>
+                </div>
+                <aside class="about-side">
+                    <div class="interests-card">
+                        <h3>Research Interests</h3>
+                        <ul class="interests-list">
+                            <li>Personal Health Informatics &amp; Self-Tracking</li>
+                            <li>AI-Assisted Health Interventions</li>
+                            <li>Self-Experimentation &amp; N-of-1 Studies</li>
+                            <li>Technology for Older Adults</li>
+                            <li>Digital Support for Caregivers</li>
+                        </ul>
+                    </div>
+                    <div class="education-card">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <p class="edu-degree">PhD, Computer Science</p>
+                            <p class="edu-school">UMass Amherst · 2023-2028 (expected)</p>
+                        </div>
+                        <div class="edu-item">
+                            <p class="edu-degree">MSc, Computer Science</p>
+                            <p class="edu-school">University of Geneva · 2019-2022</p>
+                        </div>
+                        <div class="edu-item">
+                            <p class="edu-degree">BTech, Electronics &amp; Telecom.</p>
+                            <p class="edu-school">K J Somaiya College · 2015-2019</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
@@ -106,27 +168,91 @@
     <!-- News Section -->
     <section id="news" class="news">
         <div class="container">
-            <h2>Recent News</h2>
-            <div class="news-list">
-                <div class="news-item">
-                    <span class="date">January 2026</span>
-                    <p>CASEbot paper accepted for <strong>CHI 2026</strong> Barcelona</p>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">News</h2>
+                <div class="section-rule"></div>
+            </div>
+            <div class="news-timeline">
+                <div class="news-item news-highlight">
+                    <div class="news-date">
+                        <span class="month">Jul</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-upcoming">Upcoming</span>
+                        <p>Attending the inaugural <strong>ACM Interactive Health Conference (IH&rsquo;26)</strong> in Porto, Portugal. Come say hello!</p>
+                    </div>
+                </div>
+                <div class="news-item news-highlight">
+                    <div class="news-date">
+                        <span class="month">Jun</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-talk">Talk</span>
+                        <p>Giving a lightning talk at <strong>NYU Tandon School of Engineering</strong>, supported by an awarded travel grant.</p>
+                    </div>
+                </div>
+                <div class="news-item news-highlight">
+                    <div class="news-date">
+                        <span class="month">Jan</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-accepted">Accepted</span>
+                        <p>First-author paper <em>CASEbot</em> accepted to <strong>CHI 2026</strong> in Barcelona.</p>
+                    </div>
                 </div>
                 <div class="news-item">
-                    <span class="date">August 2025</span>
-                    <p>Paper on digital support for dementia caregivers published in <strong>JMIR Aging</strong></p>
+                    <div class="news-date">
+                        <span class="month">Oct</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-publication">Publication</span>
+                        <p>Systematic review of older adults&rsquo; unmet needs published in <strong>Innovation in Aging</strong>.</p>
+                    </div>
                 </div>
                 <div class="news-item">
-                    <span class="date">January 2025</span>
-                    <p>Paper comparing AI vs. human support published in <strong>ACM Transactions on Computing for Healthcare</strong></p>
+                    <div class="news-date">
+                        <span class="month">Aug</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-publication">Publication</span>
+                        <p>Paper on digital support for dementia caregivers published in <strong>JMIR Aging</strong>.</p>
+                    </div>
                 </div>
                 <div class="news-item">
-                    <span class="date">May 2024</span>
-                    <p>Presented at <strong>CHI 2024 Workshop</strong> on HCI and Aging in Honolulu, HI</p>
+                    <div class="news-date">
+                        <span class="month">Jan</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-publication">Publication</span>
+                        <p>Paper comparing AI vs. human online support published in <strong>ACM Transactions on Computing for Healthcare</strong>.</p>
+                    </div>
                 </div>
                 <div class="news-item">
-                    <span class="date">August 2023</span>
-                    <p>Started PhD at <strong>UMass Amherst</strong></p>
+                    <div class="news-date">
+                        <span class="month">May</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-talk">Talk</span>
+                        <p>Presented at the <strong>CHI 2024 Workshop on HCI and Aging</strong> in Honolulu, HI.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="month">Aug</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-tag tag-milestone">Milestone</span>
+                        <p>Started my PhD at <strong>UMass Amherst</strong>.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,59 +261,130 @@
     <!-- Publications Section -->
     <section id="publications" class="publications">
         <div class="container">
-            <h2>Publications</h2>
-            
-            <h3 class="pub-category">Journal Articles</h3>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Publications</h2>
+                <div class="section-rule"></div>
+            </div>
+            <p class="section-intro">
+                <a href="https://scholar.google.com/citations?user=MgZwTfAAAAAJ&hl=en" target="_blank">Google Scholar profile →</a>
+            </p>
+
+            <h3 class="pub-category">Conference Papers</h3>
             <div class="publication-list">
-                <div class="pub-item">
-                    <p class="pub-title">
-                        <a href="https://preprints.jmir.org/preprint/68890/accepted" target="_blank">
-                            Online Communities as a Support System for Alzheimer's Disease and Dementia Care: Large-Scale Exploratory Study
-                        </a>
-                    </p>
-                    <p class="pub-authors"><strong>S. Kaliappan</strong>, C. Liu, Y. Jain, R. Karkar, K. Saha</p>
-                    <p class="pub-venue"><em>JMIR Aging</em>, 2025</p>
-                </div>
-
-                <div class="pub-item">
-                    <p class="pub-title">
-                        <a href="https://dl.acm.org/doi/10.1145/3709366" target="_blank">
-                            AI vs. Humans for Online Support: Comparing the Language of Responses from LLMs and Online Communities of Alzheimer's Disease
-                        </a>
-                    </p>
-                    <p class="pub-authors">K. Saha, Y. Jain, C. Liu, <strong>S. Kaliappan</strong>, R. Karkar</p>
-                    <p class="pub-venue"><em>ACM Transactions on Computing for Healthcare</em>, 2025</p>
-                </div>
-
-                <div class="pub-item">
-                    <p class="pub-title">
-                        <a href="https://doi.org/10.1093/geroni/igaf106" target="_blank">
-                            A Systematic Review of Unmet Needs of Older Adults in Home Settings and Their Implications for Novel Technological Solutions
-                        </a>
-                    </p>
-                    <p class="pub-authors">A. Dolman, <strong>S. Kaliappan</strong>, Y. Zhou, D. Palleti, J. Marquard, S.I. Lee, R. Karkar, H.B. Jimison</p>
-                    <p class="pub-venue"><em>Innovation in Aging</em>, 2025</p>
-                </div>
+                <article class="pub-item">
+                    <div class="pub-marker">2026</div>
+                    <div class="pub-details">
+                        <p class="pub-title">
+                            <a href="https://doi.org/10.1145/3772318.3791551" target="_blank">
+                                CASEbot: A Conversational Agent for Structuring and Personalizing the Design of Self-Experiments in Personal Health
+                            </a>
+                        </p>
+                        <p class="pub-authors">S. Z. Ishita<sup>*</sup>, <strong>S. Kaliappan<sup>*</sup></strong>, M. Rashik, D. A. Epstein, R. Karkar &nbsp;<span class="pub-equal">*equal contribution</span></p>
+                        <p class="pub-venue"><em>CHI 2026 · ACM Conference on Human Factors in Computing Systems</em>, Barcelona, Spain</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">LLM Agent</span>
+                            <span class="pub-tag">Self-Experimentation</span>
+                            <span class="pub-tag">N-of-1</span>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-            <h3 class="pub-category">Conference & Workshop Papers</h3>
+            <h3 class="pub-category">Journal Articles</h3>
             <div class="publication-list">
-                <div class="pub-item">
-                    <p class="pub-title">
-                        <a href="https://arxiv.org/abs/2411.08123" target="_blank">
-                            Exploring the Role of LLMs for Supporting Older Adults: Opportunities and Concerns
-                        </a>
-                    </p>
-                    <p class="pub-authors"><strong>S. Kaliappan</strong>, A. Anand, K. Saha, R. Karkar</p>
-                    <p class="pub-venue"><em>CHI 2024 Workshop on HCI and Aging</em>, Honolulu, HI</p>
-                </div>
+                <article class="pub-item">
+                    <div class="pub-marker">2025</div>
+                    <div class="pub-details">
+                        <p class="pub-title">
+                            <a href="https://preprints.jmir.org/preprint/68890/accepted" target="_blank">
+                                Online Communities as a Support System for Alzheimer&rsquo;s Disease and Dementia Care: Large-Scale Exploratory Study
+                            </a>
+                        </p>
+                        <p class="pub-authors"><strong>S. Kaliappan</strong>, C. Liu, Y. Jain, R. Karkar, K. Saha</p>
+                        <p class="pub-venue"><em>JMIR Aging</em>, 2025</p>
+                    </div>
+                </article>
+
+                <article class="pub-item">
+                    <div class="pub-marker">2025</div>
+                    <div class="pub-details">
+                        <p class="pub-title">
+                            <a href="https://dl.acm.org/doi/10.1145/3709366" target="_blank">
+                                AI vs. Humans for Online Support: Comparing the Language of Responses from LLMs and Online Communities of Alzheimer&rsquo;s Disease
+                            </a>
+                        </p>
+                        <p class="pub-authors">K. Saha, Y. Jain, C. Liu, <strong>S. Kaliappan</strong>, R. Karkar</p>
+                        <p class="pub-venue"><em>ACM Transactions on Computing for Healthcare</em>, 2025</p>
+                    </div>
+                </article>
+
+                <article class="pub-item">
+                    <div class="pub-marker">2025</div>
+                    <div class="pub-details">
+                        <p class="pub-title">
+                            <a href="https://doi.org/10.1093/geroni/igaf106" target="_blank">
+                                A Systematic Review of Unmet Needs of Older Adults in Home Settings and Their Implications for Novel Technological Solutions
+                            </a>
+                        </p>
+                        <p class="pub-authors">A. Dolman, <strong>S. Kaliappan</strong>, Y. Zhou, D. Palleti, J. Marquard, S. I. Lee, R. Karkar, H. B. Jimison</p>
+                        <p class="pub-venue"><em>Innovation in Aging</em>, Vol. 9, Suppl. 1, S14-S23, 2025</p>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="pub-category">Workshop Papers</h3>
+            <div class="publication-list">
+                <article class="pub-item">
+                    <div class="pub-marker">2024</div>
+                    <div class="pub-details">
+                        <p class="pub-title">
+                            <a href="https://arxiv.org/abs/2411.08123" target="_blank">
+                                Exploring the Role of LLMs for Supporting Older Adults: Opportunities and Concerns
+                            </a>
+                        </p>
+                        <p class="pub-authors"><strong>S. Kaliappan</strong>, A. S. Anand, K. Saha, R. Karkar</p>
+                        <p class="pub-venue"><em>CHI 2024 Workshop on HCI and Aging: New Directions, New Principles</em>, Honolulu, HI</p>
+                    </div>
+                </article>
             </div>
 
             <h3 class="pub-category">Under Review</h3>
             <div class="publication-list">
-                <div class="pub-item">
-                    <p class="pub-title">CASEbot: A Conversational Agent for Structuring and Personalizing the Design of Self-Experiments in Personal Health</p>
-                    <p class="pub-authors"><strong>S. Kaliappan</strong>, et al.</p>
+                <article class="pub-item">
+                    <div class="pub-marker pub-marker-soft">UR</div>
+                    <div class="pub-details">
+                        <p class="pub-title">A Needs-First Approach to Digital Technology for Aging in Place: Perspectives from Older Adults, Caregivers, and Professionals</p>
+                        <p class="pub-venue">Under review at <em>Innovation in Aging</em></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participate / Recruitment Section -->
+    <section id="participate" class="participate">
+        <div class="container">
+            <div class="participate-card">
+                <div class="participate-text">
+                    <span class="participate-eyebrow">Call for Participants</span>
+                    <h2>Have you built a health-tracking platform?</h2>
+                    <p>
+                        I&rsquo;m recruiting developers for a research interview study on data quality
+                        in self-tracking. If you have designed or helped build a health-related app or
+                        platform that collects self-reported data (symptom logs, mood ratings, daily
+                        diaries, or EMA), I&rsquo;d love to learn from your experience.
+                    </p>
+                    <ul class="participate-details">
+                        <li><span class="pd-label">Format</span><span class="pd-text">45 to 60 minute interview, in person at UMass Amherst or remotely over Zoom</span></li>
+                        <li><span class="pd-label">Who</span><span class="pd-text">Developers of deployed or study-published platforms with at least one self-reported measure</span></li>
+                        <li><span class="pd-label">Compensation</span><span class="pd-text">Participants receive a gift card</span></li>
+                    </ul>
+                    <a href="https://umassamherst.co1.qualtrics.com/jfe/form/SV_37NVxr7rwZz4kL4" target="_blank" class="btn btn-primary participate-btn">Express interest →</a>
+                </div>
+                <div class="participate-qr">
+                    <img src="images/interest-qr.png" alt="QR code linking to the study interest form">
+                    <span class="participate-qr-label">Scan to open the interest form</span>
                 </div>
             </div>
         </div>
@@ -196,65 +393,141 @@
     <!-- Research Section -->
     <section id="research" class="research">
         <div class="container">
-            <h2>Research Projects</h2>
-            <div class="research-list">
-                
-                <div class="research-item">
-                    <h3>CASEbot: Conversational AI for Self-Experimentation</h3>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Research Projects</h2>
+                <div class="section-rule"></div>
+            </div>
+            <div class="research-grid">
+
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">01</span>
+                        <h3>Data Quality in Health-Tracking Platforms</h3>
+                    </div>
                     <p>
-                        Designed and developed an LLM-powered conversational agent using Rasa framework and Claude 3.7 Sonnet 
-                        to guide users through designing structured, personalized, and safe self-experiments in health domains. 
-                        Conducted within-subjects mixed-methods study with 42 participants, demonstrating 19.20% improvement 
-                        in experiment quality through theory-driven prompt engineering.
+                        Developing a heuristic evaluation framework to help developers recognize and
+                        mitigate data quality issues (completeness, accuracy, validity, contextuality)
+                        earlier in the development cycle. Grounded in a synthesis of 85 papers and
+                        refined through semi-structured developer interviews.
+                    </p>
+                    <div class="tags">
+                        <span>Self-Tracking</span>
+                        <span>Heuristic Evaluation</span>
+                        <span>Developer Interviews</span>
+                    </div>
+                </article>
+
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">02</span>
+                        <h3>CASEbot: Conversational AI for Self-Experimentation</h3>
+                    </div>
+                    <p>
+                        An LLM-powered conversational agent (Rasa framework, Claude 3.7 Sonnet) that
+                        guides users through designing structured, personalized, and safe self-experiments
+                        across health domains. Our within-subjects mixed-methods study with 42 participants
+                        showed a <strong>19.2% improvement in experiment quality</strong> through theory-driven
+                        prompt engineering.
                     </p>
                     <div class="tags">
                         <span>LLMs</span>
                         <span>Self-Experimentation</span>
                         <span>User Study</span>
+                        <span>CHI '26</span>
                     </div>
-                </div>
+                </article>
 
-                <div class="research-item">
-                    <h3>Digital Support for Dementia Caregivers</h3>
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">03</span>
+                        <h3>Digital Support for Dementia Caregivers</h3>
+                    </div>
                     <p>
-                        Extracted key caregiver concerns and support needs from 100,000+ posts in Alzheimer's online communities 
-                        using topic modeling (LDA). Engineered ML classifiers (SVM, Random Forest, Neural Networks) achieving 
-                        AUC scores of 0.83-0.87 for detecting emotional and informational support patterns.
+                        Extracted key caregiver concerns and support needs from 100,000+ posts in
+                        Alzheimer&rsquo;s online communities using topic modeling (LDA). Engineered ML
+                        classifiers (SVM, Random Forest, Neural Networks) achieving <strong>AUC scores
+                        of 0.83-0.87</strong> for detecting emotional and informational support patterns.
                     </p>
                     <div class="tags">
                         <span>NLP</span>
                         <span>Topic Modeling</span>
                         <span>Social Computing</span>
+                        <span>JMIR Aging</span>
                     </div>
-                </div>
+                </article>
 
-                <div class="research-item">
-                    <h3>Systematic Review of Technology Needs for Older Adults</h3>
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">04</span>
+                        <h3>Systematic Review of Technology Needs for Older Adults</h3>
+                    </div>
                     <p>
-                        Conducted comprehensive literature review identifying unmet needs of older adults in home settings. 
-                        Collaborated with interdisciplinary team to synthesize findings and develop evidence-based design 
-                        recommendations for aging-in-place technologies.
+                        Conducted a comprehensive literature review identifying unmet needs of older
+                        adults in home settings. Collaborated with an interdisciplinary team to
+                        synthesize findings into evidence-based design recommendations for aging-in-place
+                        technologies.
                     </p>
                     <div class="tags">
                         <span>Aging</span>
                         <span>Literature Review</span>
                         <span>Accessibility</span>
                     </div>
-                </div>
+                </article>
 
-                <div class="research-item">
-                    <h3>Intelligent OCR for Medical Records</h3>
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">05</span>
+                        <h3>Intelligent OCR for Medical Records</h3>
+                    </div>
                     <p>
-                        Implemented joint-learning framework using LayoutLMv1 for OCR and key-value extraction from 15,000+ 
-                        printed and handwritten medical documents. Achieved high accuracy (Acc: 0.983, F1: 0.945) on 
-                        real-world healthcare forms.
+                        Implemented a joint-learning framework using LayoutLMv1 for OCR and
+                        key-value extraction from 15,000+ printed and handwritten medical documents
+                        at Narayana Hrudayalaya Hospitals. Achieved <strong>Acc: 0.983, F1: 0.945</strong>
+                        on real-world healthcare forms, enabling digitization of patient records.
                     </p>
                     <div class="tags">
                         <span>Computer Vision</span>
                         <span>OCR</span>
                         <span>Healthcare</span>
                     </div>
-                </div>
+                </article>
+
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">06</span>
+                        <h3>Synthetic Medical Image Generation</h3>
+                    </div>
+                    <p>
+                        Developed GAN and Wasserstein Autoencoder (WAE) models for synthetic
+                        pneumonia X-ray generation. Implemented a guided subset selection methodology
+                        to boost data diversity, <strong>improving classification accuracy by up to 21.64%</strong>
+                        on label-scarce datasets.
+                    </p>
+                    <div class="tags">
+                        <span>Generative Models</span>
+                        <span>Medical Imaging</span>
+                        <span>Data Augmentation</span>
+                    </div>
+                </article>
+
+                <article class="research-item">
+                    <div class="research-header">
+                        <span class="research-number">07</span>
+                        <h3>Player Profiling via Physiological Signals</h3>
+                    </div>
+                    <p>
+                        Designed a comprehensive player profiling pipeline using physiological
+                        signals (ECG, EDA, Respiration) and in-game events from 100+ Counter-Strike
+                        participants. Applied dimensionality reduction and model-based clustering
+                        (LDA, logistic regression) to identify gameplay-driven emotional response patterns.
+                    </p>
+                    <div class="tags">
+                        <span>Physiological Computing</span>
+                        <span>Clustering</span>
+                        <span>MSc Thesis</span>
+                    </div>
+                </article>
 
             </div>
         </div>
@@ -263,25 +536,140 @@
     <!-- Teaching Section -->
     <section id="teaching" class="teaching">
         <div class="container">
-            <h2>Teaching</h2>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Teaching</h2>
+                <div class="section-rule"></div>
+            </div>
             <div class="teaching-list">
-                
+
                 <div class="teaching-item">
-                    <div class="course-info">
-                        <h3>CS 325: Human-Computer Interaction</h3>
-                        <span class="semester">Fall 2025</span>
+                    <div class="teaching-marker"></div>
+                    <div class="teaching-body">
+                        <div class="course-info">
+                            <h3>CS 325 · Human-Computer Interaction</h3>
+                            <span class="semester">Fall 2025 · Spring 2026</span>
+                        </div>
+                        <p class="role">Teaching Assistant, UMass Amherst</p>
+                        <p class="role-detail">Mentored students in course projects involving user research and interface design; held office hours and provided technical support for student teams.</p>
                     </div>
-                    <p class="role">Teaching Assistant, UMass Amherst</p>
                 </div>
 
                 <div class="teaching-item">
-                    <div class="course-info">
-                        <h3>INFO 490PA: Personal Health Informatics</h3>
-                        <span class="semester">Spring 2024, Spring 2025</span>
+                    <div class="teaching-marker"></div>
+                    <div class="teaching-body">
+                        <div class="course-info">
+                            <h3>INFO 490PA · Personal Health Informatics</h3>
+                            <span class="semester">Spring 2024 · Spring 2025</span>
+                        </div>
+                        <p class="role">Teaching Assistant, UMass Amherst</p>
+                        <p class="role-detail">Assisted in course delivery covering self-tracking technologies, personal informatics systems, and health data analysis.</p>
                     </div>
-                    <p class="role">Teaching Assistant, UMass Amherst</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks & Service Section -->
+    <section id="talks" class="talks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Talks &amp; Service</h2>
+                <div class="section-rule"></div>
+            </div>
+            <div class="talks-grid">
+                <div class="talks-col">
+                    <h3 class="subcol-title">Talks &amp; Presentations</h3>
+                    <div class="talk-item talk-upcoming">
+                        <div class="talk-meta">
+                            <span class="talk-when">Jul 2026</span>
+                            <span class="talk-flag">Upcoming</span>
+                        </div>
+                        <p class="talk-title">Full paper presentation of <em>CASEbot</em></p>
+                        <p class="talk-where">ACM Interactive Health Conference (IH&rsquo;26), Porto, Portugal</p>
+                    </div>
+                    <div class="talk-item talk-upcoming">
+                        <div class="talk-meta">
+                            <span class="talk-when">Jun 2026</span>
+                            <span class="talk-flag">Upcoming</span>
+                        </div>
+                        <p class="talk-title">Lightning Talk</p>
+                        <p class="talk-where">NYU Tandon School of Engineering</p>
+                    </div>
+                    <div class="talk-item">
+                        <div class="talk-meta">
+                            <span class="talk-when">May 2024</span>
+                        </div>
+                        <p class="talk-title">Exploring the Role of LLMs for Supporting Older Adults</p>
+                        <p class="talk-where">CHI 2024 Workshop on HCI and Aging, Honolulu, HI</p>
+                    </div>
+                </div>
+                <div class="talks-col">
+                    <h3 class="subcol-title">Awards</h3>
+                    <div class="service-card">
+                        <p class="service-main">Travel Grant</p>
+                        <p class="service-sub">Awarded to support the lightning talk at NYU Tandon School of Engineering (2026)</p>
+                    </div>
+                    <h3 class="subcol-title" style="margin-top:2rem;">Service</h3>
+                    <div class="service-card">
+                        <p class="service-main">Peer Reviewer</p>
+                        <p class="service-sub"><em>DIGITAL HEALTH</em> (SAGE Publishing)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Skills</h2>
+                <div class="section-rule"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Machine Learning &amp; AI</h3>
+                    <div class="skill-tags">
+                        <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span>
+                        <span>LLM Integration</span><span>Transfer Learning</span><span>GANs</span><span>Autoencoders</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Natural Language Processing</h3>
+                    <div class="skill-tags">
+                        <span>Topic Modeling (LDA)</span><span>Sentiment Analysis</span>
+                        <span>Text Classification</span><span>Transformer Models</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Computer Vision</h3>
+                    <div class="skill-tags">
+                        <span>Visual-Language Models</span><span>Image Synthesis</span><span>Medical Image Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Development &amp; Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>Python</span><span>C++</span><span>Rasa</span><span>MongoDB</span><span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Research Methods</h3>
+                    <div class="skill-tags">
+                        <span>Mixed-Methods Research</span><span>User Studies</span><span>Within-Subjects Design</span>
+                        <span>Thematic Coding</span><span>Statistical Modeling</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span>Git</span><span>Qualtrics</span><span>Prompt Engineering</span><span>Anthropic Claude API</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -289,22 +677,37 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Get in touch</h2>
+                <div class="section-rule"></div>
+            </div>
             <div class="contact-content">
-                <p>Feel free to reach out if you're interested in collaborating or want to discuss research!</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:skaliappan@umass.edu">skaliappan@umass.edu</a>
+                <p class="contact-lede">
+                    Interested in collaborating, or want to chat about HCI, health tracking,
+                    AI-assisted health tools, or technology for older adults? I&rsquo;d love to hear from you.
+                </p>
+                <div class="contact-grid">
+                    <a href="mailto:skaliappan@umass.edu" class="contact-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">skaliappan@umass.edu</span>
+                    </a>
+                    <div class="contact-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>
+                        <span class="contact-label">Affiliation</span>
+                        <span class="contact-value">Manning CICS, UMass Amherst</span>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-building"></i>
-                        <span>Manning CICS, UMass Amherst</span>
+                    <div class="contact-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Amherst, MA, USA</span>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Amherst, MA, USA</span>
-                    </div>
+                    <a href="https://scholar.google.com/citations?user=MgZwTfAAAAAJ&hl=en" target="_blank" class="contact-card">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.84 3.77A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.27L24 9.5z"/></svg>
+                        <span class="contact-label">Scholar</span>
+                        <span class="contact-value">Google Scholar profile</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -313,8 +716,16 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Sidharth Kaliappan</p>
-            <p class="footer-note">Last updated: November 2025</p>
+            <div class="footer-grid">
+                <div class="footer-left">
+                    <p class="footer-name">Sidharth Kaliappan</p>
+                    <p class="footer-sub">PhD Candidate · UMass Amherst</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2026 Sidharth Kaliappan</p>
+                    <p class="footer-note">Last updated: June 2026</p>
+                </div>
+            </div>
         </div>
     </footer>
 

@@ -1,110 +1,86 @@
-// ===========================
-// Mobile Menu Toggle
-// ===========================
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+/* ==========================================================================
+   Sidharth Kaliappan — main.js
+   Handles mobile nav, navbar scroll state, smooth scroll, and reveal anims.
+   ========================================================================== */
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
+    /* -------- Mobile hamburger menu -------- */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-// ===========================
-// Smooth Scroll for Navigation Links
-// ===========================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        
-        if (href === '#') {
-            return;
-        }
-        
-        e.preventDefault();
-        const target = document.querySelector(href);
-        
-        if (target) {
-            const navHeight = document.getElementById('navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when a nav link is clicked (mobile)
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navMenu.classList.remove('open');
             });
-        }
-    });
-});
-
-// ===========================
-// Navbar Scroll Effect
-// ===========================
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+        });
     }
+
+    /* -------- Navbar: add .scrolled once user scrolls -------- */
+    const navbar = document.getElementById('navbar');
+    const setNavState = () => {
+        if (!navbar) return;
+        if (window.scrollY > 12) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    };
+    setNavState();
+    window.addEventListener('scroll', setNavState, { passive: true });
+
+    /* -------- Smooth anchor scroll with navbar offset -------- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            const targetId = anchor.getAttribute('href');
+            if (targetId.length < 2) return;
+            const target = document.querySelector(targetId);
+            if (!target) return;
+            e.preventDefault();
+            const offset = 72; // navbar height
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
+
+    /* -------- Reveal on scroll for key content blocks -------- */
+    const revealSelector = [
+        '.section-header',
+        '.about-prose',
+        '.about-side',
+        '.news-item',
+        '.pub-item',
+        '.research-item',
+        '.teaching-item',
+        '.contact-card',
+        '.contact-lede'
+    ].join(', ');
+
+    const reveals = document.querySelectorAll(revealSelector);
+    reveals.forEach(el => el.classList.add('reveal'));
+
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => io.observe(el));
+    } else {
+        // Fallback: just reveal everything
+        reveals.forEach(el => el.classList.add('in-view'));
+    }
+
 });
-
-console.log('Website loaded successfully! 🎓');
-```
-
----
-
-## **Key Changes Made:**
-
-### ✅ **1. Simpler, Cleaner Design**
-- Removed excessive sections and animations
-- Streamlined layout focused on essential academic information
-- Single-column layout for better readability
-- Minimalist color scheme
-- Clean typography
-
-### ✅ **2. Updated Content from CV**
-- All publications, research projects, and teaching updated
-- Dates corrected throughout
-- Fixed publication venues (e.g., "ACM Transactions on Computing for Healthcare")
-
-### ✅ **3. Circular Profile Image**
-- Changed `.profile-image` to use `border-radius: 50%`
-- Added proper sizing and `object-fit: cover` for circular cropping
-- Border and shadow for better appearance
-
-### ✅ **4. Fixed Dates**
-- **Recent News**: Updated to January 2025 for publications
-- **Last Updated**: Changed to "January 2025" in footer
-- **Teaching**: Fixed CS 325 to "Fall 2024" (was incorrectly "Fall 2025")
-
-### ✅ **5. Other Improvements**
-- Removed "Download CV" button from hero (kept CV link in nav)
-- Simplified social links (removed "Email Me" button redundancy)
-- Changed "PhD Student" to "PhD Candidate" throughout
-- Cleaner news section layout
-- Better mobile responsiveness
-- Removed heavy animations for faster loading
-
----
-
-## **File Structure:**
-```
-your-github-username.github.io/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── images/
-│   ├── profile.jpg (your circular image)
-│   └── favicon.ico
-├── files/
-│   └── CV_Sidharth_Kaliappan.pdf
-└── README.md
