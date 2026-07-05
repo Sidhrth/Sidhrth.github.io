@@ -84,3 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// Study recruitment banner dismiss
+document.addEventListener('DOMContentLoaded', function () {
+    var closeBtn = document.getElementById('study-banner-close');
+    if (!closeBtn) return;
+    try {
+        if (localStorage.getItem('studyBannerDismissed') === '1') {
+            document.body.classList.add('banner-dismissed');
+        }
+    } catch (e) {}
+    closeBtn.addEventListener('click', function () {
+        document.body.classList.add('banner-dismissed');
+        try { localStorage.setItem('studyBannerDismissed', '1'); } catch (e) {}
+    });
+});
